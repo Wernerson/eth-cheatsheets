@@ -20,8 +20,19 @@ order $m$ in $d$ variables.\\
     \item{
         $k(\binom{x}{y}, \binom{x'}{y'})=k(x,x')k(y,y')$, $k(\binom{x}{y}, \binom{x'}{y'})=k(x,x') + k(y,y')$ where $\binom{x}{y}$ is concatenation of vectors
     }
+    \item{
+        $k(x, x') = k_1(x, x')k_2(x, x')$, $k(x, x') = k_1(x, x') + k_2(x, x')$ where $ k_1: \R^d : \rightarrow \R$, $k_2: \R^d \rightarrow \R $
+    }
     \item iff. for $g$ all Taylor coefficients non-negative, then $k(x, x') = g(\left< x, x' \right>)$ is a valid kernel
     \item $\forall f. \; k(x,y) = f(x)k_1(x,y)f(y)$
+\end{rowlist}
+
+\textbf{Examples}
+
+\begin{rowlist}
+    \item $k(x, y) = 1 + (xy)^3$
+    \item $k(x, y) = min(x, y)$ and $\frac{1}{max(x, y)} = min(1/x, 1/y)$, but not $max(x, y)$!
+    \item $k(x, y) = cos(x - y)$ ($=cos(x)cos(y) + sin(x)sin(y)$)
 \end{rowlist}
 
 \textbf{Kern. Ridge Reg.}
