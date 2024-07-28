@@ -1,14 +1,16 @@
 \section*{Classification}
 
-\textbf{Zero-One loss} \quad not convex or continuous
+\textbf{Zero-One loss} (not convex or continuous)
 
 \qquad \qquad $\ell_{0-1}(\hat{f}(x), y) = \mathbb{I}_{y \neq \sgn \hat{f}(x)}$
 
-\textbf{Logistic loss} \quad $\log(1 + e^{-y \hat{f}(x)})$
+\textbf{Logistic loss} (convex) \quad $\log(1 + e^{-y \hat{f}(x)})$
 
-\textbf{Hinge loss} \quad \ $\max(0, 1-y \hat{f}(x))$
+\textbf{Hinge loss} (convex) \quad \ $\max(0, 1-y \hat{f}(x))$
 
-\textbf{Softmax} $p(1 | x) = \frac{1}{1 + e^{- \hat{f}(x)}}, p(-1 | x) = \frac{1}{1 + e^{\hat{f}(x)}}$ 
+\textbf{Softmax} (convex)
+
+\qquad $p(1 | x) = \frac{1}{1 + e^{- \hat{f}(x)}}, p(-1 | x) = \frac{1}{1 + e^{\hat{f}(x)}}$
 
 Multi-Class \ \ \ $\hat{p}_k = e^{\hat{f}_k(x)} / \sum_{i=1}^K e^{\hat{f}_j(x)}$
 
